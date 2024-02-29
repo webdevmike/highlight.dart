@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onSelected: (selected) {
               if (selected != null) {
                 setState(() {
-                  language = selected;
+                  language = selected as String;
                 });
               }
             },
@@ -96,9 +96,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             HighlightView(
-              exampleMap[language],
+              exampleMap[language]!,
               language: language,
-              theme: themeMap[theme],
+              theme: themeMap[theme]!,
               padding: EdgeInsets.all(12),
               textStyle: TextStyle(
                   fontFamily:
